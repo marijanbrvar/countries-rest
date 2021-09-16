@@ -1,19 +1,33 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
-const Navbar = () => (
-  <nav>
-    <div className="navbar">
-      <a href="#!" className="brand-logo left">
-        {/* <i className="material-icons">cloud</i> */}
-        <h5>European Countries</h5>
-      </a>
-      <ul className="right">
-        <li><i className="material-icons mx-1">mic</i></li>
-        <li><i className="material-icons">settings</i></li>
-      </ul>
-    </div>
-  </nav>
-);
+const Navbar = () => {
+  const history = useHistory();
+  return (
+    <nav>
+      <div className="navbar">
+        <Link
+          to="/"
+          className="brand-logo left"
+        >
+          {history.location.pathname === '/country' ? (
+            <div>
+              <i className="material-icons">chevron_left</i>
+            </div>
+          ) : (
+            <div>
+              European Countries
+            </div>
+          )}
+        </Link>
+        <ul className="right">
+          <li><i className="material-icons mx-1">mic</i></li>
+          <li><i className="material-icons">settings</i></li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

@@ -1,16 +1,12 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable no-use-before-define */
-/* eslint-disable react/prefer-stateless-function */
 import React, { useState, useEffect } from 'react';
+import './App.css';
 import Navbar from './componetns/layouts/Navbar';
+import MainPageHeader from './componetns/layouts/MainPageHeader';
+import MainPageItem from './componetns/layouts/MainPageItem';
 
 const App = () => {
   const [countires, setCountires] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    getCountires();
-  }, []);
 
   const getCountires = async () => {
     setLoading(true);
@@ -20,24 +16,25 @@ const App = () => {
     setLoading(false);
   };
 
+  useEffect(() => {
+    getCountires();
+  }, []);
+
   if (loading) return <h4>Loading...</h4>;
 
   return (
-    <div>
+    <>
       <Navbar />
-      <h1>Main page</h1>
-      {!loading && countires.length === 0 ? (<p>No countries to show</p>) : (
-        countires.map((country) => (
-          <li key={country.alpha2Code}>
-            {country.name}
-            {' '}
-            /
-            {country.population}
-            {country.nativeName}
-          </li>
-        ))
-      )}
-    </div>
+      <MainPageHeader countires={countires} />
+      <p className="list-header p">Countries in Alphabeth order</p>
+      <div className="section">
+        {!loading && countires.length === 0 ? (<p>No countries to show</p>) : (
+          countires.map((country) => (
+            <MainPageItem country={country} key={country.alpha2Code} />
+          ))
+        )}
+      </div>
+    </>
   );
 };
 

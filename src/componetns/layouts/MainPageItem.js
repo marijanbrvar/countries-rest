@@ -1,23 +1,22 @@
-/* eslint-disable arrow-body-style */
-/* eslint-disable dot-notation */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import * as images from '../imgs/index';
 
-const MainPageItem = ({ country }) => {
-  const countryNameTrimmed = country.name.replace(/[\s+)(]/g, '');
+const MainPageItem = (props) => {
+  const { name, population, code } = props;
+  const countryNameTrimmed = name.replace(/[\s+)(]/g, '');
 
   return (
-    <Link to="/country" className="main-page-item">
+    <Link to={code} className="main-page-item">
       <div>
         <div className="card">
-          <img src={images[countryNameTrimmed]} alt={country.name} className="image" />
+          <img src={images[countryNameTrimmed]} alt={name} className="image" />
           <i className="material-icons forward-arrow">arrow_forward</i>
           <div className="card-body">
-            <h5>{country.name}</h5>
-            <p>{country.population}</p>
+            <h5>{name}</h5>
+            <p>{population}</p>
           </div>
         </div>
       </div>
@@ -26,7 +25,9 @@ const MainPageItem = ({ country }) => {
 };
 
 MainPageItem.propTypes = {
-  country: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  population: PropTypes.number.isRequired,
+  code: PropTypes.string.isRequired,
 };
 
 export default MainPageItem;

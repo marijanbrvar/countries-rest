@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Switch, Route,
+} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -18,7 +20,7 @@ const App = () => (
           path="/"
           component={Countries}
         />
-        <Route exact path="/country" component={CountryInfo} />
+        <Route exact path="/:code" component={CountryInfo} />
       </Switch>
     </Router>
   </Provider>

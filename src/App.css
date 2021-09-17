@@ -8,7 +8,8 @@
   --primary-color-600: #68a5ff;
   --primary-color-400: #8ebbff;
   --dark-color: #333;
-  --light-color: #f4f4f4;
+  --light-color: #e2e2e2;
+  --darker-color: #8b8b8b;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -198,6 +199,11 @@ img {
   color: var(--light-color);
 }
 
+.card-header span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
@@ -279,4 +285,50 @@ img {
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+/* List */
+.list-card {
+  margin-top: 3rem;
+}
+
+.card-header {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: var(--primary-color-600);
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  padding: 0 0.3rem;
+  color: black;
+  line-height: 1;
+}
+
+.card-header img {
+  height: 120px;
+  width: auto;
+}
+
+.list-card .list-item {
+  padding: 0 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--primary-color-400);
+}
+
+.list-card .list-item:nth-child(2n+1) {
+  background-color: var(--primary-color-600);
+}
+
+.list-card .list-item p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.list-card .list-item > div {
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: 200;
 }

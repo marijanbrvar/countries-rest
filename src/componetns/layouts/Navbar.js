@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 const Navbar = () => {
   const history = useHistory();
+
   return (
     <nav>
       <div className="navbar">
@@ -11,7 +12,7 @@ const Navbar = () => {
           to="/"
           className="brand-logo left"
         >
-          {history.location.pathname === '/country' ? (
+          {history.location.pathname !== '/' ? (
             <div>
               <i className="material-icons">chevron_left</i>
             </div>

@@ -1,14 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import europeMap from '../imgs/europe_map.png';
 
 const MainPageHeader = (props) => {
-  // const { countires } = props;
-  console.log(props);
+  const { countries } = props;
 
-  // const total = countires.length;
-  // const population = countires.reduce((sum, country) => sum + country.population, 0);
+  const total = countries.length;
+  const population = countries.reduce((sum, country) => sum + country.population, 0);
 
   return (
     <>
@@ -20,11 +19,11 @@ const MainPageHeader = (props) => {
           <h4>Europe</h4>
           <span className="label">Total countries:</span>
           <h6 className="value">
-            {/* {total} */}
+            {total}
           </h6>
           <span className="label">Population: </span>
           <h6 className="value">
-            {/* {population.toLocaleString()} */}
+            {population.toLocaleString()}
           </h6>
         </div>
       </div>
@@ -32,8 +31,8 @@ const MainPageHeader = (props) => {
   );
 };
 
-// MainPageHeader.propTypes = {
-//   countires: PropTypes.array.isRequired,
-// };
+MainPageHeader.propTypes = {
+  countries: PropTypes.array.isRequired,
+};
 
 export default MainPageHeader;

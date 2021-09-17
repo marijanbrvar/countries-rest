@@ -1,7 +1,9 @@
-import { GET_COUNTRIES, SET_ERROR, SET_LOADING } from '../actions/types';
+import {
+  GET_COUNTRIES, SET_ERROR, SET_LOADING, SET_CURRENT, CLEAR_CURRENT,
+} from '../actions/types';
 
 const initialState = {
-  countries: null,
+  countries: [],
   current: null,
   loading: false,
   error: null,
@@ -15,13 +17,24 @@ export default (state = initialState, action) => {
         countries: action.payload,
         loading: false,
       };
+    case SET_CURRENT:
+      return {
+        ...state,
+        current: action.payload,
+        loading: false,
+      };
+    case CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null,
+      };
     case SET_LOADING:
+      console.log('loading');
       return {
         ...state,
         loading: true,
       };
     case SET_ERROR:
-      console.log('erroroor', action.payload);
       return {
         ...state,
         error: action.payload,

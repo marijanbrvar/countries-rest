@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable react/forbid-prop-types */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
@@ -19,9 +18,14 @@ const Countires = ({ data: { countries, loading }, getCountries }) => {
       <div>
         <p className="list-header p">Countries in Alphabeth order</p>
         <div className="section">
-          {!loading && countries.length === 0 ? (<p>No countries to show</p>) : (
+          {!loading && countries.length === 0 ? (<p>Loading...</p>) : (
             countries.map((country) => (
-              <MainPageItem country={country} key={country.alpha2Code} />
+              <MainPageItem
+                name={country.name}
+                population={country.population}
+                code={country.alpha2Code}
+                key={country.alpha2Code}
+              />
             ))
           )}
         </div>
@@ -32,6 +36,7 @@ const Countires = ({ data: { countries, loading }, getCountries }) => {
 
 Countires.propTypes = {
   data: PropTypes.object.isRequired,
+  getCountries: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

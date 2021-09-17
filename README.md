@@ -16,6 +16,7 @@
 [Live](https://marijanbrvar.github.io/countries-rest/)
 
 ### Presentation video
+[Video](https://www.loom.com/share/755efe5569df4154b8b5700eb2bb52fa)
 
 ### Prerequisites
 -Chrome browser

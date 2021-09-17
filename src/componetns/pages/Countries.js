@@ -21,7 +21,7 @@ const Countires = ({ data: { countries, loading }, getCountries }) => {
           {!loading && countries.length === 0 ? (<p>Loading...</p>) : (
             countries.map((country) => (
               <MainPageItem
-                name={country.name}
+                name={country.name || ''}
                 population={country.population}
                 code={country.alpha2Code}
                 key={country.alpha2Code}

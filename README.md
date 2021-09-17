@@ -13,6 +13,7 @@
 -React and Redux
 
 ### Live Demo
+[Live](https://marijanbrvar.github.io/countries-rest/)
 
 ### Presentation video
 

@@ -26,7 +26,7 @@ const Country = ({
         </div>
         <div>
           <h2>
-            {current.name}
+            {current.name || ''}
           </h2>
         </div>
       </div>

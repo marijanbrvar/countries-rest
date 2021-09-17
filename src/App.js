@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router, Switch, Route,
-} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -12,17 +10,15 @@ import Countries from './componetns/pages/Countries';
 
 const App = () => (
   <Provider store={store}>
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route
-          exact
-          path="/"
-          component={Countries}
-        />
-        <Route exact path="/:code" component={CountryInfo} />
-      </Switch>
-    </Router>
+    <Navbar />
+    <Switch>
+      <Route
+        exact
+        path="/"
+        component={Countries}
+      />
+      <Route path="/:code" component={CountryInfo} />
+    </Switch>
   </Provider>
 );
 

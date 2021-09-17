@@ -1,56 +1,37 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# React Capstone: World Countires
+# React Capstone: World Countries
 
-> This is the first project of the Math Magicians application. I will set up the environment and tools needed to develop a React application.
+> This React capstone project is about building a mobile web application to check a list of Countries in Europe and gave users the ability to review details about each country. The web app was created by using React and Redux libraries.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+![screenshot](./app_screenshot_1.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+-Javascript
+-CSS
+-React and Redux
 
-## Live Demo
+### Live Demo
+[Live](https://marijanbrvar.github.io/countries-rest/)
 
-[Live Demo Link](https://marijanbrvar.github.io/math-magicians-app/)
-[Live Demo Link @ HEROKU](https://mb-math-magicians-app.herokuapp.com/)
-[Live Demo Link @ NETLIFY](https://mb-math-magician-app.netlify.app/)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+### Presentation video
+[Video](https://www.loom.com/share/755efe5569df4154b8b5700eb2bb52fa)
 
 ### Prerequisites
-- Chrome browser
-- Node v14.XX >
-- npm (usually already installed with current node version)
+-Chrome browser
+-Node v14.XX >
+-npm (usually already installed with current node version)
 
-### Setup
+### Getting Started
+To get a local copy up and running, follow these simple example steps.
+`git clone git@github.com:marijanbrvar/countries-rest.git && cd countries-rest`
+`run npm install`
+### Setup and Run
 To run code locally, please follow steps belove
-1. `git@github.com:marijanbrvar/math-magicians-app.git && cd math-magicians-app`
-2. run `npm install`
-3. then run `npm run start`
-
-webpack will automatically open the default browser, and you can see uset interface of the MathMagicians web app.
-Calculator's functionality will be added soon, stay tuned and press star on my project!
-### Usage
-The Basic Calculator can be used to perform the operations of addition, subtraction, multiplication, and
-division. It also has the ability to recognize both positive and negative numbers. 
+`run npm run start`
 ### Run tests
-TBA
-
-### Deployment
-TBA
-
+`npm run test`
 
 ## Authors
 
@@ -68,6 +49,14 @@ TBA
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
+
+## Acknowledgments
+- [NelsoSakwa](https://www.behance.net/sakwadesignstudio) For the design used to build this site.
+
+
+[![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
 
 ## Show your support
 

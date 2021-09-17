@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import App from './App';
 import reducer from './store/reducers/countriesReducer';
 import { getCountries } from './store/__mocks__/api';

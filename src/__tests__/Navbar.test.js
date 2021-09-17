@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 it('renders correctly', () => {
   const tree = renderer
     .create(
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <nav>
           <div className="navbar">
             <Link

@@ -6,7 +6,7 @@ const Navbar = () => (
   <nav>
     <div className="navbar">
       <Link
-        to="/"
+        to={`${process.env.PUBLIC_URL}/`}
         className="brand-logo left"
       >
         <div className="logo">

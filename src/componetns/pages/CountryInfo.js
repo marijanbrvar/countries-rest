@@ -20,18 +20,18 @@ const Country = ({
 
   return (
     <div className="list-card">
-      <div className="card-header">
-        <div>
-          <img src={images[current.name.replace(/[\s+)(]/g, '')]} alt={current.name} />
-        </div>
-        <div>
-          <h2>
-            {current.name || ''}
-          </h2>
-        </div>
-      </div>
       {!loading && current === 0 ? (<h4 className="my-3">Loading...</h4>) : (
         <>
+          <div className="card-header">
+            <div>
+              <img src={images[current.name.replace(/[\s+)(]/g, '')]} alt={current.name} />
+            </div>
+            <div>
+              <h2>
+                {current.name || ''}
+              </h2>
+            </div>
+          </div>
           <div className="list-item">
             <p>Native name:</p>
             <div>{current.nativeName}</div>
